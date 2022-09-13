@@ -103,6 +103,7 @@ function game(numRounds) {
     while (round < numRounds) {
         // use prompt() to read player input, on invalid input do not increment round number
         playerSelection = prompt("Enter your selection! [rock/paper/scissors]");
+        // playerSelection = document
         let playerSelectionFormatted = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
         let validChoices = ['Rock', 'Paper', 'Scissors'];
         if (!validChoices.includes(playerSelectionFormatted))  {
@@ -136,4 +137,11 @@ function game(numRounds) {
     }
 }
 
-game(5);
+// get number of rounds to play
+const numRounds = 5;
+// const numRounds = document.querySelector(".rounds").valueAsNumber;
+// const rockBtn = document.querySelector(".rock");
+// const paperBtn = document.querySelector(".paper");
+// const scissorsBtn = document.querySelector(".scissors");
+// document.getElementById("round-count").textContent = numRounds
+game(numRounds);
